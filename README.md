@@ -1,2 +1,1 @@
-# manda-bem
-# manda-bem-blog
+# Manda Bem Blog
