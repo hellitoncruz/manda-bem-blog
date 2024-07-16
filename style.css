@@ -57,9 +57,6 @@ video {
     }
 }
 
-.onTop {
-    background-color: transparent;
-}
 
 .navbar .nav-item {
     display: flex;
@@ -395,6 +392,11 @@ main {
     z-index: 1;
 }
 
+#nav-container {
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    border-bottom: 1px solid #DDDDDD;
+}
+
 
 @media (max-width: 768px) {
     #menu-icon {
@@ -654,11 +656,7 @@ main {
     text-align: center;
 }
 
-.carousel-item img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
+
 
 .carousel-caption {
     position: static;
@@ -847,107 +845,6 @@ main {
 
 
 
-
-/* ACCORDION */
-
-.accordion-faq {
-    padding-top: 120px;
-    padding-bottom: 80px;
-    position: relative;
-    background-image: url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_conceito_05_cor-2.svg?id=2734);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.accordion-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 200px;
-}
-
-.accordion-content .title {
-    font-weight: 800;
-}
-
-.accordion-content,
-.accordion-faq .accordion-item {
-    width: 100%;
-}
-
-.accordion-faq .accordion-item {
-    border-bottom: 1px solid #efefef !important;
-    padding: 40px 0;
-    border-radius: unset !important;
-    border: none;
-}
-
-.accordion-button {
-    padding: 0 !important;
-    color: #313131;
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: -0.01em;
-}
-
-.accordion-button::after {
-    font: normal normal normal 18px / 1 FontAwesome;
-    content: "\f105";
-    background-image: none;
-}
-
-.accordion-button:not(.collapsed) {
-    color: #A01E25 !important;
-    background-color: unset !important;
-    box-shadow: unset !important;
-}
-
-.accordion-button:not(.collapsed)::after {
-    background-image: none;
-}
-
-
-.accordion {
-    --bs-accordion-btn-icon-transform: rotate(90deg) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.accordion-header {
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.accordion-button:focus {
-    box-shadow: unset !important;
-}
-
-.accordion-body {
-    padding: 30px 80px 0 0 !important;
-    font-size: Poppins;
-    font-size: 16px;
-    color: #666666;
-}
-
-.accordion-button:hover {
-    color: #A01E25 !important;
-}
-
-
-@media (max-width: 768px) {
-    .accordion-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 /* FOOTER */
 
 footer section {
@@ -1133,143 +1030,175 @@ footer .link-txt:hover {
 
 
 
-/* CAROUSEL DE REVIEWS */
-.review-carousel {
+/* CAROUSEL DE POSTS */
+.posts-carousel {
     overflow: hidden;
-    background: rgb(225, 216, 193) url(https://site.mandabem.com.br/wp-content/uploads/2023/06/ilustra_depoimentos.svg?id=2502) !important;
-    background-position: center !important;
+    /* background-position: center !important;
     background-repeat: no-repeat !important;
-    background-size: cover !important;
-    padding-top: 120px;
-    padding-bottom: 80px;
+    background-size: cover !important;*/
+    padding-top: 80px;
+    /* padding-bottom: 80px; */ 
 }
 
-.review-carousel .carousel {
+.posts-carousel .carousel {
     position: relative;
     overflow: hidden;
 }
 
-.review-carousel .carousel-inner {
+.posts-carousel .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.review-carousel .carousel-item {
+.posts-carousel .carousel-item {
     flex: 0 0 100%;
     text-align: center;
-    padding: 0 160px;
-    height: 204px;
-
+    background-image: url(https://site.mandabem.com.br/wp-content/plugins/post-slider-and-carousel/assets/images/bg.png) !important;
+    background-position: 3px 3px !important;
+    background-repeat: repeat !important;
+    max-width: 1260px;
 }
 
-.review-carousel .carousel-item.active {
+.posts-carousel .carousel-item.active {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.review-carousel .carousel-item img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.posts-carousel .carousel-item img {
+    width: 100%;
+    height: 400px;
+    max-width: 630px;
 }
 
-.review-carousel .carousel-caption {
+.posts-carousel .carousel-caption {
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 0 0 80px;
+    text-align: left;
+    max-width: 630px;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    background: #f5f6f8;
+    padding: 44px 105px 44px 95px;
+    margin-right: 37px;
 }
 
-.review-carousel .carousel-caption h2 {
+.posts-carousel .carousel-caption h2 {
     font-family: "Raleway";
     font-weight: 400;
     font-style: italic;
     font-size: 28px;
 }
 
-.review-carousel .carousel-pagination {
+.posts-carousel .carousel-pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.review-carousel .pagination-item {
-    background: rgba(160, 30, 37, 0.2);
+.posts-carousel .pagination-item {
+    background: #555;
     border: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 2px;
     padding: 0;
 }
 
-.review-carousel .pagination-item.active {
+.posts-carousel .pagination-item.active {
     background: #a01e25;
 }
 
-.review-carousel .carousel-caption .name {
+.posts-carousel .carousel-caption .name {
     text-align: left;
 }
 
-.review-carousel .carousel-caption .name h3 {
+.posts-carousel .carousel-caption .name h3 {
     font-family: "Poppins";
     font-weight: 500;
     font-size: 18px;
 }
 
 
-.review-carousel .carousel-caption .name p {
+.posts-carousel .carousel-caption .name p {
     font-size: 12px;
 }
 
+.post-category {
+    border-bottom: 3px solid #f1f1f1;
+    border-color: #555;
+    text-decoration: none !important;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
 
-.review-carousel .no-img {
+.post-title {
+    color: #000;
+    text-decoration: none !important;
+    border-bottom: 0px !important;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.post-date {
+    font-style: italic;
+    font-size: 12px;
+    outline: none !important;
+    text-transform: uppercase;
+}
+
+
+.posts-carousel .no-img {
     padding: 0 156px !important;
 }
 
-.review-carousel .no-img .carousel-caption {
+.posts-carousel .no-img .carousel-caption {
     margin: 0 !important;
     text-align: justify;
 }
 
-.review-carousel .container {
+.posts-carousel .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.review-carousel .no-img .carousel-caption .name,
-    .review-carousel .carousel-caption h2 {
+.posts-carousel .no-img .carousel-caption .name,
+    .posts-carousel .carousel-caption h2 {
         text-align: center;
         display: flex;
         text-align: center;
     }
 
-    .review-carousel .carousel-caption .name i {
+    .posts-carousel .carousel-caption .name i {
         display: flex;
         align-items: center;
     }
 
-    .review-carousel .carousel-caption i {
+    .posts-carousel .carousel-caption i {
         margin-right: 20px;
     }
 
-    .review-carousel .name-container i::before,
-    .review-carousel .carousel-caption .name i::before {
+    .posts-carousel .name-container i::before,
+    .posts-carousel .carousel-caption .name i::before {
         color: #a01e25;
         font-size: 32px;
         rotate: 270deg;
 
     }
 
-    .review-carousel .name-container {
+    .posts-carousel .name-container {
         display: flex;
     }
 
-    .review-carousel .carousel-caption .name h3 {
+    .posts-carousel .carousel-caption .name h3 {
         text-align: center;
         margin-bottom: 0 !important;
         display: flex;
@@ -1280,17 +1209,17 @@ footer .link-txt:hover {
 
 @media (max-width: 1440px) {
 
-    .review-carousel .no-img,
-    .review-carousel .carousel-item {
+    .posts-carousel .no-img,
+    .posts-carousel .carousel-item {
         padding: 0 20px !important;
         height: 315px;
     }
 
-    .review-carousel .carousel-item.active {
+    .posts-carousel .carousel-item.active {
         display: block;
     }
 
-    .review-carousel .carousel-caption {
+    .posts-carousel .carousel-caption {
         margin: 0;
         align-items: center;
     }
@@ -1298,40 +1227,40 @@ footer .link-txt:hover {
 
 @media (max-width: 640px) {
 
-    .review-carousel .no-img,
-    .review-carousel .carousel-item {
+    .posts-carousel .no-img,
+    .posts-carousel .carousel-item {
         height: 630px;
     }
 
-    .review-carousel .no-img .carousel-caption .name,
-    .review-carousel .carousel-caption h2 {
+    .posts-carousel .no-img .carousel-caption .name,
+    .posts-carousel .carousel-caption h2 {
         text-align: center;
         display: flex;
         text-align: center;
     }
 
-    .review-carousel .carousel-caption .name i {
+    .posts-carousel .carousel-caption .name i {
         display: flex;
         align-items: center;
     }
 
-    .review-carousel .carousel-caption i {
+    .posts-carousel .carousel-caption i {
         margin-right: 20px;
     }
 
-    .review-carousel .name-container i::before,
-    .review-carousel .carousel-caption .name i::before {
+    .posts-carousel .name-container i::before,
+    .posts-carousel .carousel-caption .name i::before {
         color: #a01e25;
         font-size: 32px;
         rotate: 270deg;
 
     }
 
-    .review-carousel .name-container {
+    .posts-carousel .name-container {
         display: flex;
     }
 
-    .review-carousel .carousel-caption .name h3 {
+    .posts-carousel .carousel-caption .name h3 {
         text-align: center;
         margin-bottom: 0 !important;
         display: flex;
@@ -1339,8 +1268,21 @@ footer .link-txt:hover {
     }
 }
 
+.posts-card-inner {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
+    max-width: 1280px;
+}
 
+.post-card-content {
+    padding: 0 20px 0 20px;
+}
 
+.post-card-thumbnail img{
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 
@@ -1349,9 +1291,19 @@ footer .link-txt:hover {
 
 /* ----------------------------- */
 
+/* BANNER */
 
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
-
+.banner-container .img {
+    width: 1000px;
+}
 
 
 
